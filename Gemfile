@@ -37,5 +37,13 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'rubocop', '>= 1.0', '< 2.0'gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'font_awesome5_rails'
+
+gem 'cancancan'
+gem 'devise'
+
+gem 'bulma-rails', '~> 0.9.2'
