@@ -15,6 +15,9 @@
   </head>
 
   <body>
+  <% if user_signed_in? %>
+      <%= render "_partials/navbar" %>
+    <%end%>
     <% if notice %>
       <p class="alert alert-primary"><%= notice %></p>
     <% end %>
