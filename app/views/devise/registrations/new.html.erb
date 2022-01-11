@@ -1,0 +1,31 @@
+<div class="container py-5 w-50 min-vh-100 text-center d-flex flex-column justify-content-center align-items-center">
+  <h2 class="display-1 fw-bold mb-5">Sign up</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, placeholder: "Full Name", class: "mb-4 rounded-3 py-2 px-5" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Your E-mail", class: "mb-4 rounded-3 py-2 px-5" %>
+  </div>
+
+  <div class="field">
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "password", class: "mb-4 rounded-3 py-2 px-5" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "confirm your password", class: "mb-4 rounded-3 py-2 px-5" %>
+  </div>
+
+  <div class="form-actions my-3">
+    <%= f.submit "Sign up", class: "button is-success is-focused m-5" %>
+     <%= render "devise/shared/links" %>   
+  </div>
+  <% end %>
+</div>

@@ -1,0 +1,12 @@
+<p>
+  <strong>Name:</strong>
+  <%= @action.name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @action.amount %>
+</p>
+
+<%= link_to 'Edit', edit_action_path(@action) %> |
+<%= link_to 'Back', actions_path %>
