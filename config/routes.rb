@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'categories#index'
+  root 'splashes#index'
   
-  resources :actions
-  resources :categories
+  resources :activities, only: [:index, :new, :show, :create]
+  resources :categories, only: [:index, :new, :show, :create]
 end
