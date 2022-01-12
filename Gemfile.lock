@@ -93,9 +93,8 @@ GEM
     diff-lcs (1.5.0)
     erubi (1.10.0)
     ffi (1.15.5)
-    font_awesome5_rails (1.5.0)
-      nokogiri (>= 1.11.3)
-      railties (>= 4.2)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.8.11)
@@ -270,7 +269,7 @@ DEPENDENCIES
   cancancan
   capybara (>= 3.26)
   devise
-  font_awesome5_rails
+  font-awesome-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
