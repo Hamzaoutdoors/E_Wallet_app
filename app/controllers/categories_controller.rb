@@ -14,7 +14,6 @@ class CategoriesController < ApplicationController
 
   def edit; end
 
-  # POST /categories or /categories.json
   def create
     @category = current_user.categories.new(category_params)
     respond_to do |format|
@@ -22,7 +21,7 @@ class CategoriesController < ApplicationController
         if @category.save
           flash[:notice] = 'Category was successfully created.'
         else
-          flash[:alert] = "Failed to add category - #{@recipe.errors.full_messages.first}"
+          flash[:alert] = "Failed to add category - #{@category.errors.full_messages.first}"
         end
         redirect_to categories_path
       end

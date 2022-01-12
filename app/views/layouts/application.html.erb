@@ -17,13 +17,13 @@
   <body>
   <% if user_signed_in? %>
       <%= render "_partials/navbar" %>
-    <%end%>
-    <% if notice %>
+      <% if notice %>
       <p class="alert alert-primary"><%= notice %></p>
     <% end %>
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
+    <%end%>
     <%= yield %>
   </body>
 </html>

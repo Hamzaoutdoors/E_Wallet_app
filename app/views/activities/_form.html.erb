@@ -1,10 +1,10 @@
-<%= form_with(model: action) do |form| %>
-  <% if action.errors.any? %>
+<%= form_with(model: activity) do |form| %>
+  <% if activity.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(action.errors.count, "error") %> prohibited this action from being saved:</h2>
+      <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
 
       <ul>
-        <% action.errors.each do |error| %>
+        <% activity.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -18,10 +18,10 @@
 
   <div class="field">
     <%= form.label :amount %>
-    <%= form.text_field :amount %>
+    <%= form.number_field :amount %>
   </div>
 
-  <div class="actions">
+  <div class="activitys">
     <%= form.submit %>
   </div>
 <% end %>
