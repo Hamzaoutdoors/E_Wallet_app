@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @categories = Category.all.includes(activity_categories: :activity)
+    @categories = current_user.categories.includes(activity_categories: :activity)
   end
 
   def show
