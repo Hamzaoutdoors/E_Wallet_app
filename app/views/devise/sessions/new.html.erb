@@ -1,26 +1,26 @@
-<div class="container py-5 w-50 min-vh-100 text-center d-flex flex-column justify-content-center align-items-center">
-
-  <h2 class="display-1 fw-bold mb-5">Log in</h2>
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail adresse", class: "mb-4 rounded-3 py-2 px-5" %>
-    </div>
-
-    <div class="field">
-      <%= f.password_field :password, autocomplete: "current-password", placeholder: "password", class: "mb-4 rounded-3 py-2 px-5" %>
-    </div>
-
-    <% if devise_mapping.rememberable? %>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
-      </div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <nav class="navbar mobile-header">
+    <%= link_to root_path, class: "back-button" do%>
+      <span><i class="fa fa-arrow-left"></i></span>
     <% end %>
+    <h3 class="header-title fw-bold fs-2">LOGIN</h3>
+    <%= f.submit "Log in", class: "btn mr-2 text-light display-6" %>
+  </nav>
+  
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail", class: "form-control py-4" %>
+  </div>
 
-    <div class="d-flex justify-content-center">
-      <%= f.submit "Log in", class: "button is-success is-focused mr-2" %>
-      <%= render "devise/shared/links" %>
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control py-4" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
     </div>
   <% end %>
 
-</div>
+<% end %>
+
