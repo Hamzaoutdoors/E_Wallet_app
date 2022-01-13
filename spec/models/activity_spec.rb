@@ -9,32 +9,32 @@ RSpec.describe Activity, type: :model do
     user.save
   end
 
-  subject do 
+  subject do
     Activity.new(
-      name: "Buy milk",
+      name: 'Buy milk',
       amount: 1.22,
-      author_id: 1,
+      author_id: 1
     )
   end
 
-  before { subject.save}
+  before { subject.save }
 
   it 'is valid with valid attributes' do
-    expect(subject).to be_valid  
+    expect(subject).to be_valid
   end
 
   it 'is not valid with invalid name attribute' do
     subject.name = nil
-    expect(subject).to_not be_valid 
+    expect(subject).to_not be_valid
   end
 
   it 'is not valid with invalid amount attribute' do
     subject.amount = -1
-    expect(subject).to_not be_valid 
+    expect(subject).to_not be_valid
   end
 
   it 'is valid with valid amount attribute' do
     subject.amount = 2.5
-    expect(subject).to be_valid 
+    expect(subject).to be_valid
   end
 end

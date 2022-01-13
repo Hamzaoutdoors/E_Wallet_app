@@ -9,27 +9,27 @@ RSpec.describe Category, type: :model do
     user.save
   end
 
-  subject do 
+  subject do
     Category.new(
-      name: "groceries",
-      icon: "https://thumbs.dreamstime.com/b/groceries-icon-food-162460009.jpg",
+      name: 'groceries',
+      icon: 'https://thumbs.dreamstime.com/b/groceries-icon-food-162460009.jpg',
       author_id: 1
     )
   end
 
-  before { subject.save}
+  before { subject.save }
 
   it 'is valid with valid attributes' do
-    expect(subject).to be_valid  
+    expect(subject).to be_valid
   end
 
   it 'is not valid with invalid name attribute' do
     subject.name = nil
-    expect(subject).to_not be_valid 
+    expect(subject).to_not be_valid
   end
 
   it 'is not valid with invalid icon attribute' do
-    subject.icon = ""
-    expect(subject).to_not be_valid 
+    subject.icon = ''
+    expect(subject).to_not be_valid
   end
 end
