@@ -38,6 +38,10 @@ Everything will be based on the ERD class diagram presented below.
     <p>Entity Relationship Diagram (ERD) of Blog App project</p>
 </div>
 
+## Live demo link
+
+[Live server](https://damp-retreat-68441.herokuapp.com)
+
 ## Getting Started
 To run the project locally, copy up and running follow these simple example steps :
 
