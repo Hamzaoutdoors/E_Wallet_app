@@ -31,11 +31,10 @@ we are gathered here today to get through this thing called LIFE."</em><strong> 
 A **Budget app** is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 Everything will be based on the ERD class diagram presented below. 
-<img width="374" alt="erd_diagram" src="https://user-images.githubusercontent.com/80895497/148834638-b49c8179-57dd-4bae-9440-7223b33c9df4.png">
 
 </br>
  <div align="center">
-    <img alt="gif" src="https://user-images.githubusercontent.com/80895497/148834638-b49c8179-57dd-4bae-9440-7223b33c9df4.png)"  />
+    <img width="374" alt="erd_diagram" src="https://user-images.githubusercontent.com/80895497/148834638-b49c8179-57dd-4bae-9440-7223b33c9df4.png">
     <p>Entity Relationship Diagram (ERD) of Blog App project</p>
 </div>
 
@@ -50,7 +49,7 @@ $ git clone git@github.com:Hamzaoutdoors/BLog_app.git
 ```
  - Then go to the right folder 
 ```
-$ cd Blog_app
+$ cd E_Wallet_app
 ```
 ```
 $ bundle
@@ -68,10 +67,6 @@ When you will add migration file then, you can add command like
 ```
 $ rails db:migrate
 ```
-Run this command line to add some dummy data
-```
-$ rails db:seed
-```
 
  - Finaly run `rails s` and visit http://localhost:3000/  in your browser!
 
@@ -85,7 +80,7 @@ $ rails db:seed
  </br>
  <div align="center">
     <kbd>
-    <img alt="gif" src="https://user-images.githubusercontent.com/80895497/144337923-8f5660a0-6e8a-4ba4-99a5-c6ab42bb3b73.png" width=90% />
+    <img alt="gif" src="https://user-images.githubusercontent.com/80895497/149379553-ff6689c2-0cce-490e-b663-dc4e384d5cd8.png" width=90% />
     <p>16 Request Specs passed</p>
        </kbd>
 </div>
@@ -127,12 +122,3 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](https://github.com/Hamzaoutdoors/E_Wallet_app/blob/dev/LICENSE.md) licensed.
 
-<!-- rails generate migration CreatePosts author_id:bigint title:string text:text comments_counter:integer likes_counter:integer -->
-
-<!-- rails generate migration CreateUsers name:string photo:string bio:text posts_counter:integer  -->
-
-<!-- rails generate migration CreateCommetns author_id:bigint post_id:bigint text:text  -->
-
-<!-- rails generate migration CreateLikes author_id:bigint post_id:bigint-->
-
-<!-- rails db:migrate:redo STEP=3 -->

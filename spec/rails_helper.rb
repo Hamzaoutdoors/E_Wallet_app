@@ -5,6 +5,35 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
+
+def login_user
+  @user = User.create(
+    name: 'John Smith',
+    email: 'correct@email.com',
+    password: 'correctpassword'
+  )
+  @category = Category.create(
+    author_id: @user.id,
+    name: 'Loan',
+    icon: 'https://thumbs.dreamstime.com/b/groceries-icon-food-162460009.jpg'
+  )
+  @activity = Activity.create(
+    name: 'pay Nelsino back',
+    amount: 20,
+    author_id: @user.id
+  )
+  @activity_category = ActivityCategory.create(
+    created_at: Time.now,
+    updated_at: Time.now,
+    category_id: @category.id,
+    activity_id: @activity.id
+  )
+  visit user_session_path
+  fill_in 'user_email', with: 'correct@email.com'
+  fill_in 'user_password', with: 'correctpassword'
+  click_button 'Log in'
+end
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
