@@ -4,7 +4,6 @@ RSpec.feature 'Categories page', type: :feature do
   background do
     login_user
     visit "/categories/#{@category.id}"
-    
   end
 
   scenario 'Should display the title' do

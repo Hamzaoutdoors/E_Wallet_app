@@ -19,7 +19,6 @@ describe 'the signin process', type: :feature do
       expect(page).to have_content 'Signed in successfully.'
       expect(page).to have_content 'Your Categories'
       expect(page).to have_content 'ADD NEW CATEGORY'
-
     end
 
     it 'redirects to root' do
@@ -35,44 +34,44 @@ describe 'the signin process', type: :feature do
   end
 end
 
-  describe 'when unsuccesfull' do
-    before :each do
-      user = User.new(name: 'Hamza', email: 'user@example.com')
-      user.password = 'admin123'
-      user.password_confirmation = 'admin123'
-      user.save
+describe 'when unsuccesfull' do
+  before :each do
+    user = User.new(name: 'Hamza', email: 'user@example.com')
+    user.password = 'admin123'
+    user.password_confirmation = 'admin123'
+    user.save
+  end
+
+  it 'when email and passoword are not found' do
+    visit '/users/sign_in'
+    within('form') do
+      fill_in 'user_email', with: ''
+      fill_in 'user_password', with: ''
     end
+    click_button 'Log in'
 
-    it 'when email and passoword are not found' do
-      visit '/users/sign_in'
-      within('form') do
-        fill_in 'user_email', with: ''
-        fill_in 'user_password', with: ''
-      end
-      click_button 'Log in'
+    expect(page).to have_content 'Sign up'
+  end
 
-      expect(page).to have_content 'Sign up'
+  it 'when email and passoword are not found' do
+    visit '/users/sign_in'
+    within('form') do
+      fill_in 'user_email', with: 'fooooo1@foo.com'
+      fill_in 'user_password', with: 'admin123'
     end
+    click_button 'Log in'
 
-    it 'when email and passoword are not found' do
-      visit '/users/sign_in'
-      within('form') do
-        fill_in 'user_email', with: 'fooooo1@foo.com'
-        fill_in 'user_password', with: 'admin123'
-      end
-      click_button 'Log in'
+    expect(page).to have_content 'Sign up'
+  end
 
-      expect(page).to have_content 'Sign up'
+  it 'when email and passoword are not found' do
+    visit '/users/sign_in'
+    within('form') do
+      fill_in 'user_email', with: 'user@example.com'
+      fill_in 'user_password', with: 'thisisnotthepassword'
     end
+    click_button 'Log in'
 
-    it 'when email and passoword are not found' do
-      visit '/users/sign_in'
-      within('form') do
-        fill_in 'user_email', with: 'user@example.com'
-        fill_in 'user_password', with: 'thisisnotthepassword'
-      end
-      click_button 'Log in'
-
-      expect(page).to have_content 'Sign up'
-    end
+    expect(page).to have_content 'Sign up'
+  end
 end

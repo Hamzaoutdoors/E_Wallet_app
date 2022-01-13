@@ -15,7 +15,7 @@ def login_user
   @category = Category.create(
     author_id: @user.id,
     name: 'Loan',
-    icon: 'https://thumbs.dreamstime.com/b/groceries-icon-food-162460009.jpg',
+    icon: 'https://thumbs.dreamstime.com/b/groceries-icon-food-162460009.jpg'
   )
   @activity = Activity.create(
     name: 'pay Nelsino back',
