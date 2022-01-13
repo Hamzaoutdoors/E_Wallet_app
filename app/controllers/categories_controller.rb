@@ -5,9 +5,11 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
-  def show; end
+  def show
+    @category = Category.find_by_id(params[:id])
+    @activity_categories = @category.activity_categories.includes(:category).order(created_at: :desc)
+  end
 
-  # GET /categories/new
   def new
     @category = Category.new
   end

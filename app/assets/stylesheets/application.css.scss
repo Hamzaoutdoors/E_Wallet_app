@@ -33,7 +33,7 @@ body {
   padding: 20px 0;
   background-color: #5fb523;
   color: white !important;
-  margin-top: 70px;
+  margin-top: 100%;
 
   span {
       border: 1px solid white;
@@ -51,14 +51,15 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 20px;
   height: 80px;
 
   .header-title {
     font-family: montserrat, sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     text-transform: uppercase;
     margin-left: 30px;
   }

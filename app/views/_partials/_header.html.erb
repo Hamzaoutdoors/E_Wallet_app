@@ -3,5 +3,8 @@
     <span><i class="fa fa-arrow-left"></i></span>
   <% end %>
   <h3 class="header-title"><%= title %></h3>
-  <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn text-light" %>
+  <%= link_to destroy_user_session_path, method: :delete, class: "btn text-light" do%>
+    <span>Log out</span>
+    <i class="fa fa-sign-out"></i>
+  <%end%>
 </nav>

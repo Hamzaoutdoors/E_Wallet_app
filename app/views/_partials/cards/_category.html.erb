@@ -10,7 +10,7 @@
       <span class="category-date"><%= category.created_at.strftime("%d %m %Y")%></span>
     </div>
     <div class="w-25 ml-4 pl-4">
-      <h4 class="category-total">$1000</h4>
+      <h4 class="category-total">$ <%= total_amount(category.activity_categories) %></h4>
     </div>
   </div>
 </div>
