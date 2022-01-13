@@ -42,6 +42,21 @@ Everything will be based on the ERD class diagram presented below.
 
 [Live server](https://damp-retreat-68441.herokuapp.com)
 
+#### Budge App Screenshots
+
+<table>
+  <tr>
+     <td>Splash Page</td>
+     <td>Categories Page</td>
+     <td>Transactions Page</td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/80895497/149399069-130286e2-702e-403a-b713-1fa2b2c76832.PNG" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/80895497/149399077-3f968a63-e965-4c7d-81b1-faa98ed0d7aa.PNG" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/80895497/149399078-32dc8367-d76a-4255-8109-475835647212.PNG" width=270 height=480></td>
+  </tr>
+ </table>
+
 ## Getting Started
 To run the project locally, copy up and running follow these simple example steps :
 
@@ -85,7 +100,7 @@ $ rails db:migrate
  <div align="center">
     <kbd>
     <img alt="gif" src="https://user-images.githubusercontent.com/80895497/149379553-ff6689c2-0cce-490e-b663-dc4e384d5cd8.png" width=90% />
-    <p>16 Request Specs passed</p>
+    <p>23 Request Specs passed</p>
        </kbd>
 </div>
 
@@ -115,7 +130,7 @@ Feel free to check the [issues page](https://github.com/Hamzaoutdoors/E_Wallet_a
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
+- Original design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.
 - Inspiration 💘
 - Microverse program ⚡
 - My standup team 😍
