@@ -23,8 +23,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "confirm your password", class: "mb-4 rounded-3 py-2 px-5" %>
   </div>
 
-  <div class="form-actions my-3">
-    <%= f.submit "Sign up", class: "button is-success is-focused m-5" %>
+  <div class="d-flex justify-content-center">
+    <%= f.submit "Sign up", class: "button is-success is-focused mr-2" %>
      <%= render "devise/shared/links" %>   
   </div>
   <% end %>

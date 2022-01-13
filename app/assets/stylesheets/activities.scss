@@ -1,0 +1,29 @@
+// Place all the styles related to the actions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.activity-container {
+  width: 100%;
+  margin-top: 1.2rem;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+
+  .activity-detail {
+    font-size: 1rem;
+    font-weight: 200;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  }
+
+  .activity-body {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    text-align: start;
+    padding-left: 20px;
+  }
+
+  .activity-amount {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}

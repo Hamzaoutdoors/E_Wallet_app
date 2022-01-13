@@ -12,16 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, autofocus: true, required: true, placeholder: "Category name", class: "form-control", id: "name" %>
   </div>
 
   <div class="field">
-    <%= form.label :icon %>
-    <%= form.text_field :icon %>
+    <%= form.text_field :icon, required: true, placeholder: "Add icon URL", class: "form-control", id: "icon" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions mt-5">
+    <%= form.submit 'Save Category', class: "btn btn-add"%>
   </div>
 <% end %>
