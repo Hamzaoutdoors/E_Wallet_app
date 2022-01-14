@@ -40,7 +40,7 @@ Everything will be based on the ERD class diagram presented below.
 
 ## Live demo link
 
-[Live server](https://damp-retreat-68441.herokuapp.com)
+[Live server](https://e-wallet-app1.herokuapp.com/)
 
 #### Budge App Screenshots
 
