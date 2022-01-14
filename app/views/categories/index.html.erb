@@ -1,0 +1,16 @@
+<div class="catgories-container d-flex flex-column">
+  <%= render partial: "_partials/header", locals: { title: "Your Categories", back_path: root_path} %>
+  <div class="category-cards text-center">
+    <%if @categories.empty? %>
+    <h2 class="fw-bold mt-5 display-3">There is no category</h2>
+    <p class="mt-3 display-7">Try to add one with the below button</p>
+    <%else%>
+      <% @categories.each do |category|%>
+        <%= link_to category_path(category.id) do%>
+          <%= render "_partials/cards/category", category: category%>
+        <%end%>
+      <%end%>
+    <%end%>
+  </div>
+  <%= render partial: "_partials/buttons/add_new_item", locals: { label: "Add New Category", new_path: new_category_path } %>
+</div>

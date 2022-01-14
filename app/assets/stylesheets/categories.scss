@@ -1,0 +1,46 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.catgories-container {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+
+  .category-cards {
+    padding: 0 15px;
+
+    .category-card {
+      display: flex;
+      padding: 5px;
+      height: 100px;
+      align-items: center;
+
+      .card-title {
+        font-size: 0.7rem;
+        color: rgb(156, 154, 154);
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      .category-icon {
+        width: 100%;
+        flex: 1;
+        margin-right: 10px;
+      }
+
+      .category-date {
+        font-size: 0.7rem;
+        color: rgb(156, 154, 154);
+      }
+
+      .category-total {
+        font-size: 1rem;
+        font-weight: bold;
+        color: black;
+      }
+    }
+  }
+}

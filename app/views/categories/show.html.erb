@@ -1,0 +1,17 @@
+<div>
+  <%= render partial: "_partials/header", locals: { title: "Your Transactions", back_path: categories_path} %>
+  <%= render partial: "_partials/category_header", locals: { category: @category, activity_categories: @activity_categories } %>
+
+  <div class="text-center">
+    <%if @activity_categories.empty? %>
+    <h2 class="fw-bold mt-5 display-6">There Is No Transactions</h2>
+    <p class="mt-3 display-7">Try to add one with the below button</p>
+    <%else%>
+      <h2 class="fw-bold mt-5 display-6">Recent Transactions</h2>
+      <% @activity_categories.each do |activity_category|%>
+          <%= render partial: "_partials/cards/activity", locals: { activity_category: activity_category } %>
+      <%end%>
+    <%end%>
+  </div>
+    <%= render partial: "_partials/buttons/add_new_item", locals: { label: "Add Transaction", new_path: new_activity_path } %>
+</div>

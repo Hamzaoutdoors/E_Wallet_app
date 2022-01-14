@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*
+ *= require font-awesome
+ */
+@import "font-awesome";
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-add {
+  min-width: 100%;
+  padding: 20px 0;
+  background-color: #5fb523;
+  color: white !important;
+  margin-top: 300px;
+
+  span {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 85px;
+  }
+
+  &:hover {
+    background-color: #7fb956;
+  }
+}
+
+.mobile-header {
+  background-color: #3778c2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+
+  .header-title {
+    font-family: montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-left: 30px;
+  }
+
+  .back-button {
+    i {
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <nav class="navbar mobile-header">
+    <%= link_to root_path, class: "back-button" do%>
+      <span><i class="fa fa-arrow-left"></i></span>
+    <% end %>
+    <h3 class="header-title fw-bold fs-2">REGISTER</h3>
+    <%= f.submit "Sign up", class: "btn mr-2 text-light" %>
+  </nav>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, placeholder: "Full Name", class: "form-control py-4" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Your E-mail", class: "form-control py-4" %>
+  </div>
+
+  <div class="field">
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control py-4" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Your Password",  class: "form-control py-4" %>
+  </div>
+
+<% end %>

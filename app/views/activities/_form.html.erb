@@ -1,0 +1,31 @@
+<%= form_with(model: activity) do |form| %>
+  <% if activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+        <% activity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :name,  autofocus: true, required: true, placeholder: "Transaction Name", class: "form-control", id: "name"  %>
+  </div>
+
+  <div class="field">
+    <%= form.number_field :amount, required: true, placeholder: "Add you amount", class: "form-control", id: "amount"  %>
+  </div>
+
+  <div class="form-group">
+		<label for="food" class="form-label mr-4 display-5">Category</label>
+		<%= form.select :category_id, current_user.categories.map { |category| [category.name, category.id]} ,  {}, { class: "form-select form-select-lg mb-3" }%> 
+  </div>
+
+  <div class="actions mt-5">
+    <%= form.submit 'Save Transaction', class: "btn btn-add" %>
+  </div>
+<% end %>
+
